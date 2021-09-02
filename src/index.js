@@ -2,12 +2,16 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import { GlobalStyles } from './styles/global-styles';
+import { ThemeProvider } from 'styled-components';
 import Home from './templates/Home';
+import { theme } from './styles/theme';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Home />
-    <GlobalStyles />
+    <ThemeProvider theme={theme}>
+      <Home />
+      <GlobalStyles />
+    </ThemeProvider>
   </React.StrictMode>,
   document.getElementById('root'),
 );
