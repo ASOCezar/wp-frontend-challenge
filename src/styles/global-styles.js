@@ -18,6 +18,7 @@ export const GlobalStyles = createGlobalStyle`
 
   h2 {
     font-weight: ${theme.font.weight.black};
+    font-size: ${theme.font.sizes.xxlarge};
     color: ${theme.colors.marineBlue};
   }
 `;
