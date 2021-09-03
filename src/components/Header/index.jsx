@@ -1,21 +1,43 @@
 import * as Styled from './styles';
 
-import logo from '../../assets/home-images/logo.png';
-import Menulogo from '../../assets/menu-images/jamcity-logo.svg';
-import facebookLogo from '../../assets/menu-images/facebook-logo.svg';
-import instagramLogo from '../../assets/menu-images/instagram-logo.svg';
-import twitterLogo from '../../assets/menu-images/twitter-logo.svg';
-import ytbLogo from '../../assets/menu-images/ytb-logo.svg';
-import linkedinLogo from '../../assets/menu-images/linkedin-logo.svg';
+import { useRef, useState } from 'react';
+import PropTypes from 'prop-types';
+
+import logo from '../../assets/home-images/jamcity-logo.png';
+import menuLogo from '../../assets/menu-images/jamcity-logo.png';
+import facebookLogo from '../../assets/menu-images/facebook-logo.png';
+import instagramLogo from '../../assets/menu-images/instagram-logo.png';
+import twitterLogo from '../../assets/menu-images/twitter-logo.png';
+import ytbLogo from '../../assets/menu-images/ytb-logo.png';
+import linkedinLogo from '../../assets/menu-images/linkedin-logo.png';
 
 export const Header = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+  const bar1 = useRef();
+  const bar2 = useRef();
+  const bar3 = useRef();
+
+  console.log(menuOpen);
+
+  function changeMenuIcon() {
+    bar1.current.classList.toggle('change');
+    bar2.current.classList.toggle('change');
+    bar3.current.classList.toggle('change');
+  }
+
   return (
-    <Styled.Container>
+    <Styled.Container menuOpen={menuOpen}>
       <img src={logo} className="logo" aria-label="logo da jamcity" />
-      <button className="open-menu">
-        <div className="bar1"></div>
-        <div className="bar2"></div>
-        <div className="bar3"></div>
+      <button
+        className="open-menu"
+        onClick={() => {
+          changeMenuIcon();
+          setMenuOpen((prevState) => !prevState);
+        }}
+      >
+        <div className="bar1" ref={bar1}></div>
+        <div className="bar2" ref={bar2}></div>
+        <div className="bar3" ref={bar3}></div>
       </button>
       <div className="menu-wrapper">
         <nav>
@@ -42,7 +64,7 @@ export const Header = () => {
           </a>
         </nav>
         <div className="menu-logo">
-          <img src={Menulogo} aria-label="logo da jamcity" />
+          <img src={menuLogo} aria-label="logo da jamcity" />
         </div>
         <div className="menu-socials">
           <button className="social-button">

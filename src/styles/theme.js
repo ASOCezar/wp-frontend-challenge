@@ -11,13 +11,13 @@ export const theme = {
   },
   font: {
     sizes: {
-      xsmall: '12pt',
-      small: '13pt',
-      medium: '18pt',
-      large: '20pt',
-      xlarge: '25pt',
-      xxlarge: '35pt',
-      big: '44pt',
+      xsmall: '12px',
+      small: '13px',
+      medium: '18px',
+      large: '20px',
+      xlarge: '25px',
+      xxlarge: '35px',
+      big: '44px',
     },
     weight: {
       regular: '400',
@@ -25,5 +25,8 @@ export const theme = {
       extrabold: '800',
       black: '900',
     },
+  },
+  media: {
+    tablet: '(min-width: 768px)',
   },
 };
