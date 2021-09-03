@@ -18,7 +18,6 @@ export const Container = styled.header`
     width: 100%;
     height: 113px;
     padding-inline: 40px;
-    background-color: none;
     background-image: linear-gradient(${theme.colors.white}, ${theme.colors.secondaryWhite});
     display: flex;
     flex-direction: row;
@@ -125,6 +124,56 @@ export const Container = styled.header`
             width: 100%;
             height: 100%;
           }
+        }
+      }
+    }
+
+    @media ${theme.media.tablet} {
+      position: absolute;
+      flex-direction: row;
+      padding-inline: 10px;
+      justify-content: space-evenly;
+      gap: 20px;
+
+      .logo {
+        width: 115px;
+        height: 27px;
+      }
+
+      .open-menu {
+        display: none;
+        visibility: hidden;
+      }
+
+      .menu-wrapper {
+        flex-direction: row;
+        position: unset;
+        background-color: transparent;
+        height: 100%;
+        max-width: 100%;
+
+        nav {
+          flex-direction: row;
+          justify-content: flex-start;
+          align-items: center;
+          gap: 30px;
+          padding: 0;
+
+          .menu-link {
+            color: ${theme.colors.marineBlue};
+            font-size: ${theme.font.sizes.large};
+            flex-wrap: nowrap;
+          }
+        }
+
+        .menu-logo {
+          visibility: hidden;
+          display: none;
+        }
+
+        .menu-socials {
+          display: none;
+          visibility: hidden;
         }
       }
     }
