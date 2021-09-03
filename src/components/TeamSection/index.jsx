@@ -1,5 +1,9 @@
 import * as Styled from './styles';
 
+import creator1 from '../../assets/home-images/creators/creator1.png';
+import creator2 from '../../assets/home-images/creators/creator2.png';
+import teamImg from '../../assets/home-images/team/team.png';
+
 export const TeamSection = () => (
   <Styled.Container>
     <div className="title">
@@ -14,14 +18,14 @@ export const TeamSection = () => (
     </div>
     <div className="team-images">
       <div className="team-creators">
-        <img />
-        <img />
+        <img src={creator1} />
+        <img src={creator2} />
       </div>
       <div className="team-group">
         <img />
       </div>
       <button className="btn-learnMore">
-        <img />
+        <img src={teamImg} />
       </button>
     </div>
   </Styled.Container>

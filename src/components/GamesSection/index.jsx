@@ -1,4 +1,9 @@
 import * as Styled from './styles';
+import buttonBg from '../../assets/home-images/button-bg.svg';
+
+import { GameCard } from '../GameCard';
+
+import dataGames from './dataGames';
 
 export const GamesSection = () => (
   <Styled.Container>
@@ -12,20 +17,12 @@ export const GamesSection = () => (
       </span>
     </div>
     <div className="cardGames-wrapper">
-      <div className="card">
-        <div className="card-img">
-          <img className="background" />
-          <img className="shadow" />
-          <img className="character" />
-        </div>
-        <div className="card-text">
-          <h3 className="game-title"></h3>
-          <a href="#">SEE DETAILS &gt;</a>
-        </div>
-      </div>
+      {dataGames.map((game) => (
+        <GameCard key={game.name} imgArr={game.image} name={game.name} />
+      ))}
     </div>
     <button className="btn-learnMore">
-      <img />
+      <img src={buttonBg} />
     </button>
   </Styled.Container>
 );

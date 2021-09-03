@@ -1,26 +1,33 @@
 import * as Styled from './styles.js';
 
+import logo from '../../assets/footer-images/jamcity-logo.svg';
+import facebookLogo from '../../assets/footer-images/facebook-logo.svg';
+import instagramLogo from '../../assets/footer-images/instagram-logo.svg';
+import twitterLogo from '../../assets/footer-images/twitter-logo.svg';
+import ytbLogo from '../../assets/footer-images/ytb-logo.svg';
+import linkedinLogo from '../../assets/footer-images/linkedin-logo.svg';
+
 export const Footer = () => (
   <Styled.Container>
     <div className="social-wrapper">
       <button className="social-button">
-        <img aria-label="logo do facebook" />
+        <img src={facebookLogo} aria-label="logo do facebook" />
       </button>
       <button className="social-button">
-        <img aria-label="logo do twitter" />
+        <img src={twitterLogo} aria-label="logo do twitter" />
       </button>
       <button className="social-button">
-        <img aria-label="logo do instagram" />
+        <img src={instagramLogo} aria-label="logo do instagram" />
       </button>
       <button className="social-button">
-        <img aria-label="logo do youtube" />
+        <img src={ytbLogo} aria-label="logo do youtube" />
       </button>
       <button className="social-button">
-        <img aria-label="logo do linkedin" />
+        <img src={linkedinLogo} aria-label="logo do linkedin" />
       </button>
     </div>
     <div className="footer-logo">
-      <img aria-label="logo da jamcity" />
+      <img src={logo} aria-label="logo da jamcity" />
     </div>
     <nav>
       <a href="#" className="menu-link">
