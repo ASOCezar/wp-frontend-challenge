@@ -1,13 +1,13 @@
 import styled, { css, keyframes } from 'styled-components';
 
 const openMenu = keyframes`
-  from {left: -400px};
+  from {left: -600px};
   to {left: 0};
 `;
 
 const closeMenu = keyframes`
   from {left: 0};
-  to {left: -400px};
+  to {left: -600px};
 `;
 
 export const Container = styled.header`
@@ -35,6 +35,7 @@ export const Container = styled.header`
       border: none;
       display: inline-block;
       outline: none;
+      z-index: 4;
 
       .bar1,
       .bar2,
@@ -71,7 +72,7 @@ export const Container = styled.header`
       background-color: ${theme.colors.marineBlue};
       inset: 0;
       height: 100vh;
-      width: 80%;
+      width: 75%;
       animation: ${({ menuOpen }) => (menuOpen ? openMenu : closeMenu)} 300ms linear forwards;
       gap: 15px;
       padding-block: 20px;
@@ -128,12 +129,12 @@ export const Container = styled.header`
       }
     }
 
-    @media ${theme.media.tablet} {
+    @media ${theme.media.desktop} {
       position: absolute;
       flex-direction: row;
-      padding-inline: 10px;
-      justify-content: space-evenly;
-      gap: 20px;
+      padding-inline: 50px;
+      justify-content: center;
+      gap: 35px;
 
       .logo {
         width: 115px;
@@ -150,19 +151,20 @@ export const Container = styled.header`
         position: unset;
         background-color: transparent;
         height: 100%;
-        max-width: 100%;
+        width: 100%;
+        padding-block: 0px;
 
         nav {
           flex-direction: row;
           justify-content: flex-start;
           align-items: center;
-          gap: 30px;
+          gap: 20px;
           padding: 0;
 
           .menu-link {
             color: ${theme.colors.marineBlue};
-            font-size: ${theme.font.sizes.large};
             flex-wrap: nowrap;
+            font-size: ${theme.font.sizes.large};
           }
         }
 
@@ -172,8 +174,8 @@ export const Container = styled.header`
         }
 
         .menu-socials {
-          display: none;
-          visibility: hidden;
+          width: auto;
+          gap: 15px;
         }
       }
     }

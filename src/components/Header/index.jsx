@@ -1,15 +1,46 @@
 import * as Styled from './styles';
 
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import PropTypes from 'prop-types';
 
 import logo from '../../assets/home-images/jamcity-logo.png';
 import menuLogo from '../../assets/menu-images/jamcity-logo.png';
-import facebookLogo from '../../assets/menu-images/facebook-logo.png';
-import instagramLogo from '../../assets/menu-images/instagram-logo.png';
-import twitterLogo from '../../assets/menu-images/twitter-logo.png';
-import ytbLogo from '../../assets/menu-images/ytb-logo.png';
-import linkedinLogo from '../../assets/menu-images/linkedin-logo.png';
+
+import facebookLogoDarkBg from '../../assets/social-logos/darkBg/facebook-logo.png';
+import twitterLogoDarkBg from '../../assets/social-logos/darkBg/twitter-logo.png';
+import instagramLogoDarkBg from '../../assets/social-logos/darkBg/instagram-logo.png';
+import ytbLogoDarkBg from '../../assets/social-logos/darkBg/ytb-logo.png';
+import linkedinLogoDarkBg from '../../assets/social-logos/darkBg/linkedin-logo.png';
+
+import facebookLogoLightBg from '../../assets/social-logos/lightBg/facebook-logo.png';
+import twitterLogoLightBg from '../../assets/social-logos/lightBg/twitter-logo.png';
+import instagramLogoLightBg from '../../assets/social-logos/lightBg/instagram-logo.png';
+import ytbLogoLightBg from '../../assets/social-logos/lightBg/ytb-logo.png';
+import linkedinLogoLightBg from '../../assets/social-logos/lightBg/linkedin-logo.png';
+
+const useMediaQuery = (queryValue) => {
+  const [match, setMatch] = useState(false);
+
+  useEffect(() => {
+    let isMounted = false;
+    const matchMedia = window.matchMedia(queryValue);
+
+    const handleChange = () => {
+      !isMounted && false;
+      setMatch(matchMedia.matches);
+    };
+
+    matchMedia.addEventListener('change', handleChange);
+    setMatch(matchMedia.matches);
+
+    return () => {
+      isMounted = false;
+      matchMedia.removeEventListener('change', handleChange);
+    };
+  }, [queryValue]);
+
+  return match;
+};
 
 export const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -17,7 +48,9 @@ export const Header = () => {
   const bar2 = useRef();
   const bar3 = useRef();
 
-  console.log(menuOpen);
+  const matchMedia = useMediaQuery('(min-width: 1024px)');
+
+  console.log(matchMedia);
 
   function changeMenuIcon() {
     bar1.current.classList.toggle('change');
@@ -67,21 +100,43 @@ export const Header = () => {
           <img src={menuLogo} aria-label="logo da jamcity" />
         </div>
         <div className="menu-socials">
-          <button className="social-button">
-            <img src={facebookLogo} aria-label="logo do facebook" />
-          </button>
-          <button className="social-button">
-            <img src={twitterLogo} aria-label="logo do twitter" />
-          </button>
-          <button className="social-button">
-            <img src={instagramLogo} aria-label="logo do instagram" />
-          </button>
-          <button className="social-button">
-            <img src={ytbLogo} aria-label="logo do youtube" />
-          </button>
-          <button className="social-button">
-            <img src={linkedinLogo} aria-label="logo do linkedin" />
-          </button>
+          {matchMedia ? (
+            <>
+              <button className="social-button">
+                <img src={facebookLogoLightBg} aria-label="logo do facebook" />
+              </button>
+              <button className="social-button">
+                <img src={twitterLogoLightBg} aria-label="logo do twitter" />
+              </button>
+              <button className="social-button">
+                <img src={instagramLogoLightBg} aria-label="logo do instagram" />
+              </button>
+              <button className="social-button">
+                <img src={ytbLogoLightBg} aria-label="logo do youtube" />
+              </button>
+              <button className="social-button">
+                <img src={linkedinLogoLightBg} aria-label="logo do linkedin" />
+              </button>
+            </>
+          ) : (
+            <>
+              <button className="social-button">
+                <img src={facebookLogoDarkBg} aria-label="logo do facebook" />
+              </button>
+              <button className="social-button">
+                <img src={twitterLogoDarkBg} aria-label="logo do twitter" />
+              </button>
+              <button className="social-button">
+                <img src={instagramLogoDarkBg} aria-label="logo do instagram" />
+              </button>
+              <button className="social-button">
+                <img src={ytbLogoDarkBg} aria-label="logo do youtube" />
+              </button>
+              <button className="social-button">
+                <img src={linkedinLogoDarkBg} aria-label="logo do linkedin" />
+              </button>
+            </>
+          )}
         </div>
       </div>
     </Styled.Container>
