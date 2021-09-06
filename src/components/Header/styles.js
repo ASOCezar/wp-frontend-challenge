@@ -1,13 +1,13 @@
 import styled, { css, keyframes } from 'styled-components';
 
 const openMenu = keyframes`
-  from {left: -600px};
+  from {left: -100vw};
   to {left: 0};
 `;
 
 const closeMenu = keyframes`
   from {left: 0};
-  to {left: -600px};
+  to {left: -100vw};
 `;
 
 export const Container = styled.header`
@@ -26,8 +26,8 @@ export const Container = styled.header`
     border-top: 9.5px solid ${theme.colors.pink};
 
     .logo {
-      width: 155px;
-      height: 45px;
+      width: 145px;
+      height: 35px;
     }
 
     .open-menu {
@@ -76,6 +76,7 @@ export const Container = styled.header`
       animation: ${({ menuOpen }) => (menuOpen ? openMenu : closeMenu)} 300ms linear forwards;
       gap: 15px;
       padding-block: 20px;
+      z-index: 400;
 
       nav {
         width: 100%;

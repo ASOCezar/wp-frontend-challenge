@@ -21,4 +21,8 @@ export const GlobalStyles = createGlobalStyle`
     font-size: ${theme.font.sizes.xxlarge};
     color: ${theme.colors.marineBlue};
   }
+
+  button {
+    cursor: pointer;
+  }
 `;

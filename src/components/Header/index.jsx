@@ -17,30 +17,7 @@ import twitterLogoLightBg from '../../assets/social-logos/lightBg/twitter-logo.p
 import instagramLogoLightBg from '../../assets/social-logos/lightBg/instagram-logo.png';
 import ytbLogoLightBg from '../../assets/social-logos/lightBg/ytb-logo.png';
 import linkedinLogoLightBg from '../../assets/social-logos/lightBg/linkedin-logo.png';
-
-const useMediaQuery = (queryValue) => {
-  const [match, setMatch] = useState(false);
-
-  useEffect(() => {
-    let isMounted = false;
-    const matchMedia = window.matchMedia(queryValue);
-
-    const handleChange = () => {
-      !isMounted && false;
-      setMatch(matchMedia.matches);
-    };
-
-    matchMedia.addEventListener('change', handleChange);
-    setMatch(matchMedia.matches);
-
-    return () => {
-      isMounted = false;
-      matchMedia.removeEventListener('change', handleChange);
-    };
-  }, [queryValue]);
-
-  return match;
-};
+import { useMediaQuery } from '../../utils/useMediaQuery';
 
 export const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);

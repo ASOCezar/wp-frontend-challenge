@@ -2,9 +2,8 @@ import styled, { css } from 'styled-components';
 
 export const Container = styled.div`
   ${({ theme }) => css`
-    position: fixed;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     overflow: hidden;
 
     padding-inline: 40px;
