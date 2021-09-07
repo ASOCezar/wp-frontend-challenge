@@ -4,11 +4,9 @@ export const useMediaQuery = (queryValue) => {
   const [match, setMatch] = useState(false);
 
   useEffect(() => {
-    let isMounted = false;
     const matchMedia = window.matchMedia(queryValue);
 
     const handleChange = () => {
-      !isMounted && false;
       setMatch(matchMedia.matches);
     };
 
@@ -16,7 +14,6 @@ export const useMediaQuery = (queryValue) => {
     setMatch(matchMedia.matches);
 
     return () => {
-      isMounted = false;
       matchMedia.removeEventListener('change', handleChange);
     };
   }, [queryValue]);

@@ -27,8 +27,6 @@ export const Header = () => {
 
   const matchMedia = useMediaQuery('(min-width: 1024px)');
 
-  console.log(matchMedia);
-
   function changeMenuIcon() {
     bar1.current.classList.toggle('change');
     bar2.current.classList.toggle('change');

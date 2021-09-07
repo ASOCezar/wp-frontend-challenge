@@ -5,12 +5,9 @@ import { useState } from 'react';
 
 export const Button = ({ text, hoverText }) => {
   const [mouseOver, setMouseOver] = useState(false);
-  console.log(mouseOver);
 
   return (
     <Styled.Container
-      width="150"
-      height="50"
       viewBox="0 0 275.697 80.882"
       onMouseEnter={() => setMouseOver(true)}
       onMouseLeave={() => setMouseOver(false)}

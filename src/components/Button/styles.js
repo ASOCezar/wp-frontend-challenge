@@ -2,6 +2,8 @@ import styled, { css } from 'styled-components';
 
 export const Container = styled.svg`
   ${({ theme }) => css`
+    width: 100%;
+    height: 100%;
     .b {
       clip-path: url(#a);
     }

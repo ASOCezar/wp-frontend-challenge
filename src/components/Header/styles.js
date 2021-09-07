@@ -136,11 +136,7 @@ export const Container = styled.header`
       padding-inline: 50px;
       justify-content: center;
       gap: 35px;
-
-      .logo {
-        width: 115px;
-        height: 27px;
-      }
+      z-index: 3;
 
       .open-menu {
         display: none;
