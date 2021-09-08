@@ -20,6 +20,8 @@ export const GlobalStyles = createGlobalStyle`
     font-weight: ${theme.font.weight.black};
     font-size: ${theme.font.sizes.xxlarge};
     color: ${theme.colors.marineBlue};
+    letter-spacing: -0.88px;
+    line-height: 87px;
   }
 
   button {

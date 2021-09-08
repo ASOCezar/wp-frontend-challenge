@@ -11,5 +11,12 @@ export const Container = styled.div`
     gap: 23px;
     align-content: center;
     justify-items: center;
+
+    @media ${theme.media.desktop} {
+      grid-template-columns: repeat(3, 1fr);
+      grid-auto-rows: 612.17px;
+      padding-inline: 149px;
+      gap: 37px;
+    }
   `}
 `;
