@@ -3,7 +3,8 @@ import buttonBg from '../../assets/home-images/button-bg.svg';
 
 import { GameCard } from '../GameCard';
 
-import dataGames from './dataGames';
+import dataGames from '../GamesGrid/dataGames';
+import { GamesGrid } from '../GamesGrid';
 
 export const GamesSection = () => (
   <Styled.Container>
@@ -16,11 +17,7 @@ export const GamesSection = () => (
         massa. Donec velit dolor, commodo posuere.
       </span>
     </div>
-    <div className="cardGames-wrapper">
-      {dataGames.map((game) => (
-        <GameCard key={game.name} imgArr={game.image} name={game.name} />
-      ))}
-    </div>
+    <GamesGrid />
     <button className="btn-learnMore">
       <img src={buttonBg} />
     </button>

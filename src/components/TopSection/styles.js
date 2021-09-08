@@ -82,7 +82,7 @@ export const Container = styled.section`
       justify-content: flex-end;
       width: 100%;
       height: 100vh;
-      padding-left: 40px;
+      padding-left: 4%;
 
       .main-img {
         width: 100%;
@@ -92,6 +92,7 @@ export const Container = styled.section`
           height: 100%;
           position: absolute;
           max-width: 1179px;
+          z-index: 2;
         }
         .background-img {
           position: absolute;

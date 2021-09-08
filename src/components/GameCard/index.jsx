@@ -3,10 +3,8 @@ import * as Styled from './styles';
 import PropTypes from 'prop-types';
 
 export const GameCard = ({ imgArr, name }) => (
-  <Styled.Container>
+  <Styled.Container background={imgArr.background}>
     <div className="card-img">
-      <img src={imgArr.background} className="background" />
-      <img src={imgArr.shadow} className="shadow" />
       <img src={imgArr.character} className="character" />
     </div>
     <div className="card-text">

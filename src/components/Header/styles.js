@@ -133,9 +133,9 @@ export const Container = styled.header`
     @media ${theme.media.desktop} {
       position: absolute;
       flex-direction: row;
-      padding-inline: 50px;
+      padding-inline: 140px;
       justify-content: center;
-      gap: 35px;
+      gap: 5%;
       z-index: 3;
 
       .open-menu {
@@ -161,7 +161,7 @@ export const Container = styled.header`
           .menu-link {
             color: ${theme.colors.marineBlue};
             flex-wrap: nowrap;
-            font-size: ${theme.font.sizes.large};
+            font-size: ${theme.font.sizes.xlarge};
           }
         }
 
