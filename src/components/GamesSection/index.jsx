@@ -5,6 +5,7 @@ import { GameCard } from '../GameCard';
 
 import dataGames from '../GamesGrid/dataGames';
 import { GamesGrid } from '../GamesGrid';
+import { Button } from '../Button';
 
 export const GamesSection = () => (
   <Styled.Container>
@@ -19,7 +20,7 @@ export const GamesSection = () => (
     </div>
     <GamesGrid />
     <button className="btn-learnMore">
-      <img src={buttonBg} />
+      <Button text="Browse More Games" hoverText="Let's Go" />
     </button>
   </Styled.Container>
 );

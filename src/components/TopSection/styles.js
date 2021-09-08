@@ -6,6 +6,7 @@ export const Container = styled.section`
   ${({ theme }) => css`
     width: 100%;
     height: 100vh;
+    max-height: 686px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -49,7 +50,11 @@ export const Container = styled.section`
       border: none;
       background-color: transparent;
       padding: 0;
-      margin: 0;
+      margin-top: 10px;
+      width: 159px;
+      height: 46px;
+      outline: none;
+      user-select: none;
     }
 
     .main-img {
@@ -68,13 +73,6 @@ export const Container = styled.section`
       }
     }
 
-    .btn-learnMore {
-      width: 150px;
-      height: 50px;
-      outline: none;
-      user-select: none;
-    }
-
     @media ${theme.media.desktop} {
       flex-direction: row;
       background-image: url(${sectionBg});
@@ -82,6 +80,7 @@ export const Container = styled.section`
       justify-content: flex-end;
       width: 100%;
       height: 100vh;
+      max-height: 1080px;
       padding-left: 4%;
 
       .main-img {

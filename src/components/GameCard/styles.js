@@ -34,10 +34,6 @@ export const Container = styled.div`
         width: 100%;
         height: 100%;
         transition: all 320ms linear;
-
-        &:hover {
-          transform: scale(1.05) translate(-2%, -2%);
-        }
       }
     }
 
@@ -67,6 +63,12 @@ export const Container = styled.div`
     @media ${theme.media.desktop} {
       max-width: 100%;
 
+      &:hover {
+          .character {
+            transform: scale(1.05) translate(-2%, -2%);
+          }
+        }
+
       .card-img {
         align-items: flex-end;
         .character {
@@ -75,6 +77,18 @@ export const Container = styled.div`
 
       .card-text {
         height: 150px;
+
+        .game-title {
+        color: ${theme.colors.marineBlue};
+        font-size: ${theme.font.sizes.xlarge};
+      }
+
+      a {
+        text-decoration: none;
+        color: ${theme.colors.darkPink};
+        font-size: ${theme.font.sizes.medium};
+      }
+    }
       }
     }
   `}

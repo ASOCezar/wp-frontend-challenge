@@ -18,8 +18,20 @@ export const Container = styled.section`
       max-width: 868.92px;
     }
 
+    .btn-learnMore {
+      border: none;
+      background-color: transparent;
+      padding: 0;
+      margin-top: 10px;
+      width: 159px;
+      height: 46px;
+      outline: none;
+      user-select: none;
+    }
+
     @media ${theme.media.desktop} {
       height: 100vh;
+      max-height: 1080px;
       .title {
         h2 {
           font-size: ${theme.font.sizes.big};
@@ -31,6 +43,12 @@ export const Container = styled.section`
       .description {
         line-height: 33.6px;
         font-size: ${theme.font.sizes.large};
+      }
+
+      .btn-learnMore {
+        margin-top: 45px;
+        width: 275px;
+        height: 80px;
       }
     }
   `}
