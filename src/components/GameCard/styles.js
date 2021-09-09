@@ -49,7 +49,7 @@ export const Container = styled.div`
       justify-content: center;
       z-index: 4;
       background-color: white;
-      border-radius: 0 19.16px 19.16px 0;
+      border-radius: 19.16px;
 
       .game-title {
         color: ${theme.colors.marineBlue};
