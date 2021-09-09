@@ -1,11 +1,6 @@
 import * as Styled from './styles.js';
 
 import logo from '../../assets/footer-images/jamcity-logo.svg';
-import FacebookLogoDarkBg from '../../assets/social-logos/darkBg/FacebookLogoDarkBg';
-import TwitterLogoDarkBg from '../../assets/social-logos/darkBg/TwitterLogoDarkBg';
-import InstagramLogoDarkBg from '../../assets/social-logos/darkBg/InstagramLogoDarkBg';
-import YtbLogoDarkBg from '../../assets/social-logos/darkBg/YtbLogoDarkBg';
-import LinkedinLogoDarkBg from '../../assets/social-logos/darkBg/LinkedinLogoDarkBg';
 
 import { AddressSection } from '../AddressSection/index.jsx';
 import { NavSocial } from '../NavSocial/index.jsx';

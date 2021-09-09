@@ -1,9 +1,5 @@
 import * as Styled from './styles';
-import buttonBg from '../../assets/home-images/button-bg.svg';
 
-import { GameCard } from '../GameCard';
-
-import dataGames from '../GamesGrid/dataGames';
 import { GamesGrid } from '../GamesGrid';
 import { Button } from '../Button';
 import { Title } from '../Title';

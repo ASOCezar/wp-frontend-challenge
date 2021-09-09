@@ -1,7 +1,6 @@
 import * as Styled from './styles';
 
-import { useEffect, useRef, useState } from 'react';
-import PropTypes from 'prop-types';
+import { useRef, useState } from 'react';
 
 import logo from '../../assets/home-images/jamcity-logo.png';
 import menuLogo from '../../assets/menu-images/jamcity-logo.png';

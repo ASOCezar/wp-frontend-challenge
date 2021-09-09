@@ -1,4 +1,3 @@
-import { AddressSection } from '../AddressSection';
 import { Footer } from '../Footer';
 import { GamesSection } from '../GamesSection';
 import { TeamSection } from '../TeamSection';

@@ -1,7 +1,5 @@
 import * as Styled from './styles';
 
-import titleImg from '../../assets/home-images/description-image.svg';
-import buttonBg from '../../assets/home-images/button-bg.svg';
 import mainImg from '../../assets/home-images/main-img.png';
 import mainImg2x from '../../assets/home-images/main-img2x.png';
 import mainBg from '../../assets/home-images/main-bg.png';
