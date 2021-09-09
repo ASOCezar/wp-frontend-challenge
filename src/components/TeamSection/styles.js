@@ -7,6 +7,7 @@ export const Container = styled.section`
     align-items: center;
     justify-content: flex-start;
     background-color: #f2f2f2;
+    margin: 0 auto;
 
     width: 100%;
     /* max-height: 686px; */

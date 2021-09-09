@@ -15,7 +15,7 @@ export const Container = styled.div`
     margin-top: 270px;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     justify-content: flex-start;
 
     .addres-info {
@@ -26,6 +26,11 @@ export const Container = styled.div`
       line-height: 34px;
       letter-spacing: -0.9px;
       text-align: center;
+    }
+
+    @media ${theme.media.desktop} {
+      width: auto;
+      height: 466px;
     }
   `}
 `;
