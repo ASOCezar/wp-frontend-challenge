@@ -12,7 +12,7 @@ export const Container = styled.section`
     align-items: flex-start;
     justify-content: flex-start;
     gap: 10px;
-    padding-inline: 40px;
+    padding-inline: 20px;
 
     @media ${theme.media.desktop} {
       flex-direction: row;
