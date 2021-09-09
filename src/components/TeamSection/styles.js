@@ -9,7 +9,6 @@ export const Container = styled.section`
     background-color: #f2f2f2;
 
     width: 100%;
-    height: 100vh;
     /* max-height: 686px; */
 
     .team-images {
@@ -47,12 +46,34 @@ export const Container = styled.section`
     }
 
     @media ${theme.media.desktop} {
-      max-height: 1080px;
+      max-width: 1617px;
+
+      .team-images {
+        .team-creators {
+          img {
+            object-fit: cover;
+            height: 100%;
+          }
+        }
+
+        .team-group {
+          object-fit: cover;
+          height: 100%;
+          max-height: 868px;
+          top: 150px;
+
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
 
       .btn-learnMore {
         margin-top: 45px;
         width: 275px;
         height: 80px;
+        top: 690px;
       }
     }
   `}

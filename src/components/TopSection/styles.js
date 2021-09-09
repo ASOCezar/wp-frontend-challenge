@@ -82,6 +82,7 @@ export const Container = styled.section`
       width: 100%;
       height: 100vh;
       max-height: 1080px;
+      padding-inline: 0px;
       padding-left: 4%;
 
       .main-img {

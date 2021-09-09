@@ -23,9 +23,6 @@ export const Container = styled.section`
     }
 
     @media ${theme.media.desktop} {
-      height: 100vh;
-      max-height: 1080px;
-      margin-bottom: 0;
       .title {
         h2 {
           font-size: ${theme.font.sizes.big};

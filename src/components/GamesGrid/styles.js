@@ -13,7 +13,7 @@ export const Container = styled.div`
     justify-items: center;
 
     @media ${theme.media.desktop} {
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(auto-fill, minmax(515.92px, 1fr));
       grid-auto-rows: 612.17px;
       padding-inline: 149px;
       gap: 37px;
