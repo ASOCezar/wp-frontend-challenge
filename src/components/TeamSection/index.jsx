@@ -3,7 +3,9 @@ import * as Styled from './styles';
 import creator1 from '../../assets/home-images/creators/creator1.png';
 import creator2 from '../../assets/home-images/creators/creator2.png';
 import teamImg from '../../assets/home-images/team/team.png';
+
 import { Title } from '../Title';
+import { Button } from '../Button';
 
 export const TeamSection = () => (
   <Styled.Container>
@@ -23,10 +25,10 @@ export const TeamSection = () => (
         <img src={creator2} />
       </div>
       <div className="team-group">
-        <img />
+        <img src={teamImg} />
       </div>
       <button className="btn-learnMore">
-        <img src={teamImg} />
+        <Button text="Learn More" hoverText="Let's Go" />
       </button>
     </div>
   </Styled.Container>

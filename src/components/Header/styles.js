@@ -24,6 +24,7 @@ export const Container = styled.header`
     justify-content: space-between;
     align-items: center;
     border-top: 9.5px solid ${theme.colors.pink};
+    z-index: 999;
 
     .logo {
       width: 145px;
@@ -35,7 +36,6 @@ export const Container = styled.header`
       border: none;
       display: inline-block;
       outline: none;
-      z-index: 4;
 
       .bar1,
       .bar2,
@@ -76,7 +76,6 @@ export const Container = styled.header`
       animation: ${({ menuOpen }) => (menuOpen ? openMenu : closeMenu)} 300ms linear forwards;
       gap: 15px;
       padding-block: 20px;
-      z-index: 400;
 
       nav {
         width: 100%;
@@ -136,7 +135,6 @@ export const Container = styled.header`
       padding-inline: 140px;
       justify-content: center;
       gap: 5%;
-      z-index: 3;
 
       .open-menu {
         display: none;

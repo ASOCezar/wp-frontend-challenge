@@ -9,20 +9,13 @@ export const Container = styled.section`
     align-items: center;
     justify-content: center;
     text-align: center;
-
-    .description {
-      font-size: ${theme.font.sizes.medium};
-      font-weight: ${theme.font.weight.semibold};
-      color: ${theme.colors.marineBlue};
-      line-height: 25.6px;
-      max-width: 868.92px;
-    }
+    margin-bottom: 68px;
 
     .btn-learnMore {
       border: none;
       background-color: transparent;
       padding: 0;
-      margin-top: 10px;
+      margin-top: 72.82px;
       width: 159px;
       height: 46px;
       outline: none;
@@ -32,6 +25,7 @@ export const Container = styled.section`
     @media ${theme.media.desktop} {
       height: 100vh;
       max-height: 1080px;
+      margin-bottom: 0;
       .title {
         h2 {
           font-size: ${theme.font.sizes.big};

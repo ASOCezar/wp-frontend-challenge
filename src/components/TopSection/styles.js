@@ -5,13 +5,14 @@ import sectionBg from '../../assets/home-images/topSectionBg.png';
 export const Container = styled.section`
   ${({ theme }) => css`
     width: 100%;
-    height: 100vh;
+    height: calc(100vh - 113px);
     max-height: 686px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
     gap: 10px;
+    padding-inline: 40px;
 
     .title {
       width: 294.493px;

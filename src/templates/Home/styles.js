@@ -5,7 +5,7 @@ export const Container = styled.div`
     width: 100%;
     overflow: hidden;
 
-    padding-inline: 40px;
+    /* padding-inline: 40px; */
     height: calc(100% - 113px);
 
     @media ${theme.media.desktop} {
