@@ -15,10 +15,6 @@ export const GameCard = ({ imgArr, name }) => (
 );
 
 GameCard.propTypes = {
-  imgArr: PropTypes.arrayOf({
-    background: PropTypes.string.isRequired,
-    shadow: PropTypes.string.isRequired,
-    character: PropTypes.string.isRequired,
-  }),
+  imgArr: PropTypes.object.isRequired,
   name: PropTypes.string.isRequired,
 };
