@@ -28,12 +28,15 @@ export const Container = styled.div`
       flex-direction: row;
       align-items: center;
       justify-content: center;
+      position: relative;
 
       .character {
         object-fit: contain;
         width: 100%;
         height: 100%;
         transition: all 320ms linear;
+        position: absolute;
+        bottom: -18%;
       }
     }
 
@@ -44,6 +47,9 @@ export const Container = styled.div`
       flex-direction: column;
       align-items: center;
       justify-content: center;
+      z-index: 4;
+      background-color: white;
+      border-radius: 0 19.16px 19.16px 0;
 
       .game-title {
         color: ${theme.colors.marineBlue};

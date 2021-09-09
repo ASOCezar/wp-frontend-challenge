@@ -9,7 +9,8 @@ export const Container = styled.section`
     align-items: center;
     justify-content: center;
     text-align: center;
-    margin-bottom: 68px;
+
+    padding-block: 68px;
 
     .btn-learnMore {
       border: none;
