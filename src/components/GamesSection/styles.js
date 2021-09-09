@@ -11,37 +11,5 @@ export const Container = styled.section`
     text-align: center;
 
     padding-block: 68px;
-
-    .btn-learnMore {
-      border: none;
-      background-color: transparent;
-      padding: 0;
-      margin-top: 72.82px;
-      width: 159px;
-      height: 46px;
-      outline: none;
-      user-select: none;
-    }
-
-    @media ${theme.media.desktop} {
-      .title {
-        h2 {
-          font-size: ${theme.font.sizes.big};
-          letter-spacing: -2.05px;
-          line-height: 86.56px;
-        }
-      }
-
-      .description {
-        line-height: 33.6px;
-        font-size: ${theme.font.sizes.large};
-      }
-
-      .btn-learnMore {
-        margin-top: 45px;
-        width: 275px;
-        height: 80px;
-      }
-    }
   `}
 `;

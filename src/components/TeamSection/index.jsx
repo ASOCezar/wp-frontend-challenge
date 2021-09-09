@@ -26,7 +26,7 @@ export const TeamSection = () => {
           </span>
         }
       />
-      <div className="team-images">
+      <Styled.ImageContainer>
         {matchMedia ? (
           <>
             <div className="team-creators">
@@ -48,10 +48,10 @@ export const TeamSection = () => {
             </div>
           </>
         )}
-        <button className="btn-learnMore">
+        <div className="btn-learnMore">
           <Button text="Learn More" hoverText="Let's Go" />
-        </button>
-      </div>
+        </div>
+      </Styled.ImageContainer>
     </Styled.Container>
   );
 };

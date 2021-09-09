@@ -6,19 +6,11 @@ import PropTypes from 'prop-types';
 import logo from '../../assets/home-images/jamcity-logo.png';
 import menuLogo from '../../assets/menu-images/jamcity-logo.png';
 
-import FacebookLogoDarkBg from '../../assets/social-logos/darkBg/FacebookLogoDarkBg';
-import TwitterLogoDarkBg from '../../assets/social-logos/darkBg/TwitterLogoDarkBg';
-import InstagramLogoDarkBg from '../../assets/social-logos/darkBg/InstagramLogoDarkBg';
-import YtbLogoDarkBg from '../../assets/social-logos/darkBg/YtbLogoDarkBg';
-import LinkedinLogoDarkBg from '../../assets/social-logos/darkBg/LinkedinLogoDarkBg';
-
-import FacebookLogoLightBg from '../../assets/social-logos/lightBg/FacebookLogoLightBg';
-import TwitterLogoLightBg from '../../assets/social-logos/lightBg/TwitterLogoLightBg';
-import InstagramLogoLightBg from '../../assets/social-logos/lightBg/InstagramLogoLightBg';
-import YtbLogoLightBg from '../../assets/social-logos/lightBg/YtbLogoLightBg';
-import LinkedinLogoLightBg from '../../assets/social-logos/lightBg/LinkedinLogoLightBg';
-
 import { useMediaQuery } from '../../utils/useMediaQuery';
+import { NavSocial } from '../NavSocial';
+import { NavLinks } from '../NavLinks';
+
+import data from './dataLinks';
 
 export const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -49,71 +41,16 @@ export const Header = () => {
         <div className="bar3" ref={bar3}></div>
       </button>
       <div className="menu-wrapper">
-        <nav>
-          <a href="#" className="menu-link">
-            Who We Are
-          </a>
-          <a href="#" className="menu-link">
-            Games
-          </a>
-          <a href="#" className="menu-link">
-            Press
-          </a>
-          <a href="#" className="menu-link">
-            Blog
-          </a>
-          <a href="#" className="menu-link">
-            Carrers
-          </a>
-          <a href="#" className="menu-link">
-            Support
-          </a>
-          <a href="#" className="menu-link">
-            FAQs
-          </a>
-        </nav>
+        {matchMedia ? (
+          <NavLinks links={data} dark={true} horizontal={true} />
+        ) : (
+          <NavLinks links={data} dark={false} horizontal={false} />
+        )}
+
         <div className="menu-logo">
           <img src={menuLogo} aria-label="logo da jamcity" />
         </div>
-        <div className="menu-socials">
-          {matchMedia ? (
-            <>
-              <button className="social-button">
-                <FacebookLogoLightBg />
-              </button>
-              <button className="social-button">
-                <TwitterLogoLightBg />
-              </button>
-              <button className="social-button">
-                <InstagramLogoLightBg />
-              </button>
-              <button className="social-button">
-                <YtbLogoLightBg />
-              </button>
-              <button className="social-button">
-                <LinkedinLogoLightBg />
-              </button>
-            </>
-          ) : (
-            <>
-              <button className="social-button">
-                <FacebookLogoDarkBg />
-              </button>
-              <button className="social-button">
-                <TwitterLogoDarkBg />
-              </button>
-              <button className="social-button">
-                <InstagramLogoDarkBg />
-              </button>
-              <button className="social-button">
-                <YtbLogoDarkBg />
-              </button>
-              <button className="social-button">
-                <LinkedinLogoDarkBg />
-              </button>
-            </>
-          )}
-        </div>
+        {matchMedia ? <NavSocial dark={true} /> : <NavSocial dark={false} />}
       </div>
     </Styled.Container>
   );

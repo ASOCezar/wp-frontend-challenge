@@ -77,7 +77,7 @@ export const Container = styled.header`
       gap: 15px;
       padding-block: 20px;
 
-      nav {
+      .links {
         width: 100%;
         height: 100%;
         display: flex;
@@ -108,24 +108,6 @@ export const Container = styled.header`
       }
 
       .menu-socials {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        gap: 20px;
-        width: 100%;
-
-        .social-button {
-          background-color: transparent;
-          border: none;
-          width: 35px;
-          height: 35px;
-
-          img {
-            width: 100%;
-            height: 100%;
-          }
-        }
       }
     }
 
@@ -149,28 +131,9 @@ export const Container = styled.header`
         width: 100%;
         padding-block: 0px;
 
-        nav {
-          flex-direction: row;
-          justify-content: flex-start;
-          align-items: center;
-          gap: 20px;
-          padding: 0;
-
-          .menu-link {
-            color: ${theme.colors.marineBlue};
-            flex-wrap: nowrap;
-            font-size: ${theme.font.sizes.xlarge};
-          }
-        }
-
         .menu-logo {
           visibility: hidden;
           display: none;
-        }
-
-        .menu-socials {
-          width: auto;
-          gap: 15px;
         }
       }
     }

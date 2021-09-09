@@ -13,7 +13,7 @@ export const TopSection = () => {
 
   return (
     <Styled.Container>
-      <div className="text-topSection">
+      <Styled.Wrapper className="text-topSection">
         <div className="title">
           <span className="title-text">10 years creating the best in mobile entertainment.</span>
           <div className="horizontal-line" />
@@ -25,11 +25,9 @@ export const TopSection = () => {
             <strong>120 million downloads</strong> to date.
           </span>
         </div>
-        <button className="btn-learnMore">
-          <Button text="Learn More" hoverText="Let's Go" />
-        </button>
-      </div>
-      <div className="main-img">
+        <Button text="Learn More" hoverText="Let's Go" />
+      </Styled.Wrapper>
+      <Styled.ImageContainer>
         {mediaMatch ? (
           <>
             <img src={mainImg2x} className="front-img" />
@@ -38,7 +36,7 @@ export const TopSection = () => {
         ) : (
           <img src={mainImg} className="front-img" />
         )}
-      </div>
+      </Styled.ImageContainer>
     </Styled.Container>
   );
 };

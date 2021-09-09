@@ -6,54 +6,24 @@ import TwitterLogoDarkBg from '../../assets/social-logos/darkBg/TwitterLogoDarkB
 import InstagramLogoDarkBg from '../../assets/social-logos/darkBg/InstagramLogoDarkBg';
 import YtbLogoDarkBg from '../../assets/social-logos/darkBg/YtbLogoDarkBg';
 import LinkedinLogoDarkBg from '../../assets/social-logos/darkBg/LinkedinLogoDarkBg';
+
 import { AddressSection } from '../AddressSection/index.jsx';
+import { NavSocial } from '../NavSocial/index.jsx';
+import { NavLinks } from '../NavLinks/index.jsx';
+
+import data from './dataLinks';
 
 export const Footer = () => (
   <Styled.Container>
     <AddressSection />
-    <div className="footer-content">
+    <Styled.ContentWrapper>
       <div className="first-column">
-        <div className="social-wrapper">
-          <button className="social-button">
-            <FacebookLogoDarkBg />
-          </button>
-          <button className="social-button">
-            <TwitterLogoDarkBg />
-          </button>
-          <button className="social-button">
-            <InstagramLogoDarkBg />
-          </button>
-          <button className="social-button">
-            <YtbLogoDarkBg />
-          </button>
-          <button className="social-button">
-            <LinkedinLogoDarkBg />
-          </button>
-        </div>
-        <div className="footer-logo">
-          <img src={logo} aria-label="logo da jamcity" />
-        </div>
+        <NavSocial dark={false} />
+        <img src={logo} aria-label="logo da jamcity" className="footer-logo" />
       </div>
-
       <div className="second-column">
-        <nav>
-          <a href="#" className="menu-link">
-            Who We Are
-          </a>
-          <a href="#" className="menu-link">
-            Games
-          </a>
-          <a href="#" className="menu-link">
-            Blog
-          </a>
-          <a href="#" className="menu-link">
-            Carrers
-          </a>
-          <a href="#" className="menu-link">
-            Support
-          </a>
-        </nav>
-        <div className="legal-infos">
+        <NavLinks links={data} />
+        <Styled.LegalLinks>
           <a href="#" className="legal-link">
             Privacy Policy
           </a>
@@ -63,14 +33,14 @@ export const Footer = () => (
           <a href="#" className="legal-link">
             Press
           </a>
-        </div>
-        <div className="copyrights">
+        </Styled.LegalLinks>
+        <Styled.CopyrightText>
           <small>
             © 2020 Jam City, Inc. JAM CITY® and the JAM CITY Logo are registered and/or unregistered trademarks of Jam
             City, Inc.
           </small>
-        </div>
+        </Styled.CopyrightText>
       </div>
-    </div>
+    </Styled.ContentWrapper>
   </Styled.Container>
 );
