@@ -10,7 +10,6 @@ export const Content = () => (
     <TopSection />
     <GamesSection />
     <TeamSection />
-    <AddressSection />
     <Footer />
   </Styled.Container>
 );
