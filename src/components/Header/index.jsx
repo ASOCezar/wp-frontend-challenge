@@ -6,17 +6,18 @@ import PropTypes from 'prop-types';
 import logo from '../../assets/home-images/jamcity-logo.png';
 import menuLogo from '../../assets/menu-images/jamcity-logo.png';
 
-import facebookLogoDarkBg from '../../assets/social-logos/darkBg/facebook-logo.png';
-import twitterLogoDarkBg from '../../assets/social-logos/darkBg/twitter-logo.png';
-import instagramLogoDarkBg from '../../assets/social-logos/darkBg/instagram-logo.png';
-import ytbLogoDarkBg from '../../assets/social-logos/darkBg/ytb-logo.png';
-import linkedinLogoDarkBg from '../../assets/social-logos/darkBg/linkedin-logo.png';
+import FacebookLogoDarkBg from '../../assets/social-logos/darkBg/FacebookLogoDarkBg';
+import TwitterLogoDarkBg from '../../assets/social-logos/darkBg/TwitterLogoDarkBg';
+import InstagramLogoDarkBg from '../../assets/social-logos/darkBg/InstagramLogoDarkBg';
+import YtbLogoDarkBg from '../../assets/social-logos/darkBg/YtbLogoDarkBg';
+import LinkedinLogoDarkBg from '../../assets/social-logos/darkBg/LinkedinLogoDarkBg';
 
-import facebookLogoLightBg from '../../assets/social-logos/lightBg/facebook-logo.png';
-import twitterLogoLightBg from '../../assets/social-logos/lightBg/twitter-logo.png';
-import instagramLogoLightBg from '../../assets/social-logos/lightBg/instagram-logo.png';
-import ytbLogoLightBg from '../../assets/social-logos/lightBg/ytb-logo.png';
-import linkedinLogoLightBg from '../../assets/social-logos/lightBg/linkedin-logo.png';
+import FacebookLogoLightBg from '../../assets/social-logos/lightBg/FacebookLogoLightBg';
+import TwitterLogoLightBg from '../../assets/social-logos/lightBg/TwitterLogoLightBg';
+import InstagramLogoLightBg from '../../assets/social-logos/lightBg/InstagramLogoLightBg';
+import YtbLogoLightBg from '../../assets/social-logos/lightBg/YtbLogoLightBg';
+import LinkedinLogoLightBg from '../../assets/social-logos/lightBg/LinkedinLogoLightBg';
+
 import { useMediaQuery } from '../../utils/useMediaQuery';
 
 export const Header = () => {
@@ -78,37 +79,37 @@ export const Header = () => {
           {matchMedia ? (
             <>
               <button className="social-button">
-                <img src={facebookLogoLightBg} aria-label="logo do facebook" />
+                <FacebookLogoLightBg />
               </button>
               <button className="social-button">
-                <img src={twitterLogoLightBg} aria-label="logo do twitter" />
+                <TwitterLogoLightBg />
               </button>
               <button className="social-button">
-                <img src={instagramLogoLightBg} aria-label="logo do instagram" />
+                <InstagramLogoLightBg />
               </button>
               <button className="social-button">
-                <img src={ytbLogoLightBg} aria-label="logo do youtube" />
+                <YtbLogoLightBg />
               </button>
               <button className="social-button">
-                <img src={linkedinLogoLightBg} aria-label="logo do linkedin" />
+                <LinkedinLogoLightBg />
               </button>
             </>
           ) : (
             <>
               <button className="social-button">
-                <img src={facebookLogoDarkBg} aria-label="logo do facebook" />
+                <FacebookLogoDarkBg />
               </button>
               <button className="social-button">
-                <img src={twitterLogoDarkBg} aria-label="logo do twitter" />
+                <TwitterLogoDarkBg />
               </button>
               <button className="social-button">
-                <img src={instagramLogoDarkBg} aria-label="logo do instagram" />
+                <InstagramLogoDarkBg />
               </button>
               <button className="social-button">
-                <img src={ytbLogoDarkBg} aria-label="logo do youtube" />
+                <YtbLogoDarkBg />
               </button>
               <button className="social-button">
-                <img src={linkedinLogoDarkBg} aria-label="logo do linkedin" />
+                <LinkedinLogoDarkBg />
               </button>
             </>
           )}

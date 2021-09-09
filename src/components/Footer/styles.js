@@ -121,6 +121,38 @@ export const Container = styled.div`
           padding-top: 50px;
           justify-content: flex-start;
           align-items: flex-start;
+          gap: 25px;
+        }
+
+        nav {
+          .menu-link {
+            position: relative;
+            ::after {
+              content: '';
+              position: absolute;
+              bottom: -10px;
+              border-radius: 6px;
+              width: 0;
+              height: 5px;
+              background: ${theme.colors.darkPink};
+              left: 0;
+              transition: all 0.2s ease-in-out;
+            }
+
+            :hover::after {
+              width: 55%;
+              left: 0;
+            }
+          }
+        }
+
+        .legal-infos {
+          .legal-link {
+            transition: color 0.2s linear;
+            :hover {
+              color: ${theme.colors.darkPink};
+            }
+          }
         }
 
         .copyrights {

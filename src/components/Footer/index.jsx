@@ -1,11 +1,11 @@
 import * as Styled from './styles.js';
 
 import logo from '../../assets/footer-images/jamcity-logo.svg';
-import facebookLogo from '../../assets/social-logos/darkBg/facebook-logo.png';
-import twitterLogo from '../../assets/social-logos/darkBg/twitter-logo.png';
-import instagramLogo from '../../assets/social-logos/darkBg/instagram-logo.png';
-import ytbLogo from '../../assets/social-logos/darkBg/ytb-logo.png';
-import linkedinLogo from '../../assets/social-logos/darkBg/linkedin-logo.png';
+import FacebookLogoDarkBg from '../../assets/social-logos/darkBg/FacebookLogoDarkBg';
+import TwitterLogoDarkBg from '../../assets/social-logos/darkBg/TwitterLogoDarkBg';
+import InstagramLogoDarkBg from '../../assets/social-logos/darkBg/InstagramLogoDarkBg';
+import YtbLogoDarkBg from '../../assets/social-logos/darkBg/YtbLogoDarkBg';
+import LinkedinLogoDarkBg from '../../assets/social-logos/darkBg/LinkedinLogoDarkBg';
 import { AddressSection } from '../AddressSection/index.jsx';
 
 export const Footer = () => (
@@ -15,19 +15,19 @@ export const Footer = () => (
       <div className="first-column">
         <div className="social-wrapper">
           <button className="social-button">
-            <img src={facebookLogo} aria-label="logo do facebook" />
+            <FacebookLogoDarkBg />
           </button>
           <button className="social-button">
-            <img src={twitterLogo} aria-label="logo do twitter" />
+            <TwitterLogoDarkBg />
           </button>
           <button className="social-button">
-            <img src={instagramLogo} aria-label="logo do instagram" />
+            <InstagramLogoDarkBg />
           </button>
           <button className="social-button">
-            <img src={ytbLogo} aria-label="logo do youtube" />
+            <YtbLogoDarkBg />
           </button>
           <button className="social-button">
-            <img src={linkedinLogo} aria-label="logo do linkedin" />
+            <LinkedinLogoDarkBg />
           </button>
         </div>
         <div className="footer-logo">

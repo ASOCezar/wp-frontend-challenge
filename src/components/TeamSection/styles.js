@@ -75,6 +75,7 @@ export const Container = styled.section`
         width: 275px;
         height: 80px;
         top: 690px;
+        z-index: 4;
       }
     }
   `}
