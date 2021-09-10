@@ -74,8 +74,9 @@ export const Container = styled.header`
       height: 100vh;
       width: 77vw;
       animation: ${({ menuOpen }) => (menuOpen ? openMenu : closeMenu)} 300ms linear forwards;
-      gap: 15px;
+      gap: 44px;
       padding-block: 30px;
+      padding-inline: 20.94px;
 
       .links {
         width: 100%;
@@ -95,15 +96,14 @@ export const Container = styled.header`
       }
 
       .menu-logo {
-        width: 100%;
-        height: 100%;
+        width: fit-content;
+        height: fit-content;
         display: flex;
-        align-items: center;
-        justify-content: center;
+        margin: 0 auto;
 
         img {
-          width: calc(30vw + 7.5px);
-          height: calc(30vw + 7.5px);
+          width: 110px;
+          height: calc(51.88 * 2);
           max-height: 180px;
           max-width: 180px;
         }

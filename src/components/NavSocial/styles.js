@@ -13,8 +13,8 @@ export const Container = styled.nav`
     .social-a {
       background-color: transparent;
       border: none;
-      width: 34.46px;
-      height: 34.46px;
+      width: 33.46px;
+      height: 33.46px;
       cursor: pointer;
 
       img {
