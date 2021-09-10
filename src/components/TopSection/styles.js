@@ -11,7 +11,7 @@ export const Container = styled.section`
     align-items: flex-start;
     justify-content: flex-start;
     gap: 10px;
-    padding-left: 20px;
+    padding-left: 11vw;
     position: relative;
     overflow: hidden;
 

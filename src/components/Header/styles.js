@@ -17,7 +17,7 @@ export const Container = styled.header`
     left: 0;
     width: 100%;
     height: 113px;
-    padding-inline: 40px;
+    padding-inline: 11vw;
     background-image: linear-gradient(${theme.colors.white}, ${theme.colors.secondaryWhite});
     display: flex;
     flex-direction: row;
