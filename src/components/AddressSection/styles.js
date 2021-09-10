@@ -12,8 +12,8 @@ export const Container = styled.div`
     padding-block: 38.85px;
     width: 100%;
     max-height: 312px;
-    height: calc(80vh + 12px);
-    margin-top: 74vh;
+    height: calc(80vw + 12px);
+    margin-top: 74vw;
     display: flex;
     flex-direction: column;
     align-items: center;
