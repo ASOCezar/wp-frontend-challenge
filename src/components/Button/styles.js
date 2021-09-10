@@ -5,8 +5,9 @@ export const Container = styled.button`
     border: none;
     background-color: transparent;
     padding: 0;
-    margin-top: 72.82px;
-    width: 159px;
+    width: calc(40vw + 9px);
+    height: calc(12vw + 1px);
+    max-width: 159px;
     height: 46px;
     outline: none;
     user-select: none;
@@ -57,8 +58,10 @@ export const Container = styled.button`
 
     @media ${theme.media.desktop} {
       margin-top: 45px;
-      width: 275px;
-      height: 80px;
+      width: calc(14vw + 7px);
+      height: calc(4vw + 3.2px);
+      max-width: 275px;
+      max-height: 80px;
     }
   `}
 `;

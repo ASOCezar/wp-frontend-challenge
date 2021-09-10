@@ -16,6 +16,8 @@ export const GamesSection = () => (
       }
     />
     <GamesGrid />
-    <Button text="Browse More Games" hoverText="Let's Go" />
+    <div className="btn-seeMore">
+      <Button text="Browse More Games" hoverText="Let's Go" />
+    </div>
   </Styled.Container>
 );

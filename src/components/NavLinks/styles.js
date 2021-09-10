@@ -4,14 +4,19 @@ const direction = (horizontal) =>
   horizontal
     ? css`
         flex-direction: row;
-        justify-content: flex-start;
-        gap: 20px;
+        justify-content: center;
+        gap: calc(2vw + 2px);
         padding: 0;
+
+        a {
+          white-space: nowrap;
+          font-size: clamp(10px, 1vw + 8.8px, 28px);
+        }
       `
     : css`
         flex-direction: column;
         justify-content: center;
-        gap: 25px;
+        gap: 19px;
       `;
 
 const changeColor = (dark, theme) =>
@@ -26,7 +31,10 @@ const changeColor = (dark, theme) =>
 export const Container = styled.nav`
   ${({ theme, dark, horizontal }) => css`
     display: flex;
-    ${direction(horizontal)}
+    flex-direction: column;
+    justify-content: center;
+    gap: calc(15% + 1px);
+
     width: 100%;
     align-items: center;
 
@@ -35,16 +43,19 @@ export const Container = styled.nav`
       ${changeColor(dark, theme)}
       font-weight: ${theme.font.weight.black};
       font-size: ${theme.font.sizes.xlarge};
+      line-height: 56px;
     }
 
     @media ${theme.media.desktop} {
       height: 100%;
-      padding-top: ${horizontal ? 0 : '50px'};
-      justify-content: flex-start;
+      ${direction(horizontal)}
+
+      justify-content: center;
       align-items: ${horizontal ? 'center' : 'flex-start'};
 
       a {
         position: relative;
+        line-height: 100%;
         ::after {
           content: '';
           position: absolute;

@@ -3,7 +3,7 @@ import * as Styled from './styles';
 import { useRef, useState } from 'react';
 
 import logo from '../../assets/home-images/jamcity-logo.png';
-import menuLogo from '../../assets/menu-images/jamcity-logo.png';
+import menuLogo from '../../assets/menu-images/jamcity-logo.svg';
 
 import { useMediaQuery } from '../../utils/useMediaQuery';
 import { NavSocial } from '../NavSocial';

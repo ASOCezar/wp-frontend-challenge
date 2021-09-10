@@ -11,7 +11,7 @@ const closeMenu = keyframes`
 `;
 
 export const Container = styled.header`
-  ${({ theme, menuOpen }) => css`
+  ${({ theme }) => css`
     position: fixed;
     top: 0;
     left: 0;
@@ -70,12 +70,12 @@ export const Container = styled.header`
       flex-direction: column;
       position: fixed;
       background-color: ${theme.colors.marineBlue};
-      inset: 0;
+      top: 9.4px;
       height: 100vh;
-      width: 75%;
+      width: 77vw;
       animation: ${({ menuOpen }) => (menuOpen ? openMenu : closeMenu)} 300ms linear forwards;
       gap: 15px;
-      padding-block: 20px;
+      padding-block: 30px;
 
       .links {
         width: 100%;
@@ -102,8 +102,10 @@ export const Container = styled.header`
         justify-content: center;
 
         img {
-          width: 120px;
-          height: 120px;
+          width: calc(30vw + 7.5px);
+          height: calc(30vw + 7.5px);
+          max-height: 180px;
+          max-width: 180px;
         }
       }
 
@@ -113,8 +115,10 @@ export const Container = styled.header`
 
     @media ${theme.media.desktop} {
       position: absolute;
+      height: 160px;
       flex-direction: row;
-      padding-inline: 140px;
+
+      padding-inline: 7.5%;
       justify-content: center;
       gap: 5%;
 

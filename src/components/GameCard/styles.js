@@ -68,6 +68,7 @@ export const Container = styled.div`
 
     @media ${theme.media.desktop} {
       max-width: 100%;
+      overflow: hidden;
 
       &:hover {
           .character {
@@ -82,17 +83,19 @@ export const Container = styled.div`
       }
 
       .card-text {
-        height: 150px;
+        height: auto;
+        padding: 15px;
 
         .game-title {
         color: ${theme.colors.marineBlue};
-        font-size: ${theme.font.sizes.xlarge};
+        font-size: 30px;
       }
 
       a {
         text-decoration: none;
         color: ${theme.colors.darkPink};
-        font-size: ${theme.font.sizes.medium};
+        font-size: ${theme.font.sizes.large};
+        text-transform: uppercase;
       }
     }
       }
